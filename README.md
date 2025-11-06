@@ -3,4 +3,7 @@
 ## Project Start
 * Create file throuth Spring Initializr
     * Choose Maven, JAR, and check Java version
-* sdsd
+    * mvn clean install -U
+    * mvn spring-boot:run
+* Spring benefits 
+    * Loose Coupling (not Tight)

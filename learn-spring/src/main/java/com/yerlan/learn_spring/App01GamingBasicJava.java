@@ -2,12 +2,11 @@ package com.yerlan.learn_spring;
 
 import com.yerlan.learn_spring.game1.GameRunner;
 import com.yerlan.learn_spring.game1.MarioGame;
-import com.yerlan.learn_spring.game1.SuperContraGame;
 import com.yerlan.learn_spring.game2.GameRunner2;
 import com.yerlan.learn_spring.game2.MarioGame2;
 import com.yerlan.learn_spring.game2.SuperContraGame2;
 
-public class AppGamingBasicJava {
+public class App01GamingBasicJava {
     public static void main(String[] args) {
         
         //Tight Coupling here. 

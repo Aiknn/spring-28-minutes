@@ -1,6 +1,7 @@
-package com.yerlan.learn_spring.game1;
+package com.yerlan.learn_spring_1.game_1;
 
 public class MarioGame {
+
     public void up(){
         System.out.println("Jump");
     }

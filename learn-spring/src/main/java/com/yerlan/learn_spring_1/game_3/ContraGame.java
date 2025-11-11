@@ -1,14 +1,14 @@
-package com.yerlan.learn_spring.game2;
+package com.yerlan.learn_spring_1.game_3;
 
-public class MarioGame2 implements GamingConsole {
+public class ContraGame implements IGame {
 
     @Override
     public void up(){
-        System.out.println("Jump");
+        System.out.println("up");
     }
     @Override
     public void down(){
-        System.out.println("Go into a hole");
+        System.out.println("Sit down");
     }
     @Override
     public void left(){
@@ -16,6 +16,6 @@ public class MarioGame2 implements GamingConsole {
     }
     @Override
     public void right(){
-        System.out.println("Accelerate");
+        System.out.println("Shoot a bullet");
     }
 }

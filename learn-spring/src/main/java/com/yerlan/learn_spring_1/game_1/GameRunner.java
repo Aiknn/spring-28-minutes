@@ -1,13 +1,14 @@
-package com.yerlan.learn_spring.game2;
+package com.yerlan.learn_spring_1.game_1;
 
-public class GameRunner2 {
-    GamingConsole game;
+public class GameRunner {
+    private MarioGame game;
 
-    public GameRunner2(GamingConsole game){
+    public GameRunner(MarioGame game){
         this.game = game;
     }
 
     public void run() {
+        System.out.println("---------------------");
         System.out.println("Running game: " + game);
         game.up();
         game.down();

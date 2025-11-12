@@ -8,6 +8,8 @@ public class App {
         //Loose Coupling here (through interface + Spring Beans). 
         //If you want to change MarioGame for other game, you need just add 
         //@Primary to the Bean in Configuration file
+        //Spring reads configuration (looks gor @Configuration in other Conf file),
+        //creates Beans, creates objects for us, controls lifecycle 
         
         try (var context = new AnnotationConfigApplicationContext(GameConfiguration.class)){
             context.getBean(GameRunner.class).run();

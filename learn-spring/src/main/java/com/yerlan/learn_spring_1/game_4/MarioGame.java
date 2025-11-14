@@ -1,5 +1,10 @@
 package com.yerlan.learn_spring_1.game_4;
 
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Component;
+
+@Component
+@Primary
 public class MarioGame implements IGame {
 
     @Override

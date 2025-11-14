@@ -1,34 +1,23 @@
 package com.yerlan.learn_spring_1.game_4;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
-
+    
 @Configuration
+@ComponentScan("com.yerlan.learn_spring_1.game_4")
 public class App {
-    //Loose Coupling here (through interface + Spring Beans). 
-    //If you want to change MarioGame for other game, you need just add 
-    //@Primary to the Bean in Configuration file
-    //Spring reads configuration from App (Config file deleted) 
-    //creates Beans, creates objects for us 
-    @Bean
-    public IGame mario(){
-        var game = new MarioGame();
-        return game;
-    }
+    //Evolving our Spring project 
 
-    @Bean
-    @Primary
-    public IGame contra(){
-        var game = new ContraGame();
-        return game;
-    }
+    //@Configuration – replacement for XML configuration file; 
+    //marks the class that defines beans (objects created and managed by Spring).
 
-    @Bean
-    public GameRunner gameRunner (IGame game){
-        return new GameRunner(game);
-    }
+    //@ComponentScan("package") – tells Spring where to look for components 
+    //and other Spring-managed classes (e.g. @Component, @Service, @Repository, @Controller).
+
+    //@Component – marks a class as a Spring-managed component; 
+    //Spring automatically creates its object (bean) and puts it into the application context.
+   
     public static void main(String[] args) {
         try (var context = new AnnotationConfigApplicationContext(App.class)){
             context.getBean(GameRunner.class).run();

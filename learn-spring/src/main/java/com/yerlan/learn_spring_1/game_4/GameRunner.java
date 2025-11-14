@@ -1,5 +1,8 @@
 package com.yerlan.learn_spring_1.game_4;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class GameRunner  {
     IGame game;
 

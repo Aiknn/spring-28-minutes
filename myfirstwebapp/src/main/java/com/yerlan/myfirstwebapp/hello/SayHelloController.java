@@ -22,10 +22,15 @@ public class SayHelloController {
         sb.append("<title>My first html page</title>");
         sb.append("</head>");
         sb.append("<body>");
-        sb.append("My first html page with body");
+        sb.append("My first html page with body - HTML");
         sb.append("</body>");
         sb.append("</html>");
         
         return sb.toString();
+    }
+
+    @RequestMapping("say-hello-jsp")
+    public String sayHelloJsp(){
+        return "sayHello";
     }
 }

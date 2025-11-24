@@ -35,3 +35,9 @@
 * create for one url (login) two methods, one for GET and one for POST method, and they will render different views.
 * create @Service class which check credentials and enter it to Controller class 
 * if Controller class authorices, then sends model to view. If not, sends model and error 
+
+# ToDoList
+* Created Todo POJO with AllArgsConstructor, getter, setters and ToString
+* Created TodoService class which got static ToDo List, and it populates data 
+* Created TodoController with @Controller on class and  @RequestMapping("list-todos") on method
+* created jsp file 

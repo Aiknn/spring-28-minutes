@@ -52,4 +52,12 @@
 * add in jsp file
     * on top - <%@ taglib prefix="c" uri="jakarta.tags.core" %>
     * in code - <c:forEach items="${todos}" var="todo">, <td>${todo.id}</td>
+* add to POM
+    * groupId - org.webjars, artifactId - bootstrap, version - 5.1.3
+    * groupId - org.webjars, artifactId - jquery, version - 3.6.0
+* add to JSP file
+    * in head - <link href="webjars/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet" >
+    * in body before closing tag
+        * <script src="webjars/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+        * <script src="webjars/jquery/3.6.0/jquery.min.js"></script>
                     

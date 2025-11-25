@@ -36,8 +36,20 @@
 * create @Service class which check credentials and enter it to Controller class 
 * if Controller class authorices, then sends model to view. If not, sends model and error 
 
+# Session
+* Request scope is active only for one session 
+    * for ex, Controller sends model to jsp, and second other jsp will not see the data from model
+* use @SessionAttributes("name") for Controllers (both - who accepts and sends)
+
 # ToDoList
 * Created Todo POJO with AllArgsConstructor, getter, setters and ToString
 * Created TodoService class which got static ToDo List, and it populates data 
 * Created TodoController with @Controller on class and  @RequestMapping("list-todos") on method
 * created jsp file 
+* add POM 
+    * groupId - jakarta.servlet.jsp.jstl, artifactId - jakarta.servlet.jsp.jstl-api
+    * groupId - org.glassfish.web, artifactId - jakarta.servlet.jsp.jstl
+* add in jsp file
+    * on top - <%@ taglib prefix="c" uri="jakarta.tags.core" %>
+    * in code - <c:forEach items="${todos}" var="todo">, <td>${todo.id}</td>
+                    

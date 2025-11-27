@@ -60,4 +60,15 @@
     * in body before closing tag
         * <script src="webjars/bootstrap/5.1.3/js/bootstrap.min.js"></script>
         * <script src="webjars/jquery/3.6.0/jquery.min.js"></script>
+* logic behind todo list and add todo
+    * client clicks web - localhost:8080/list-todos
+    * controller takes from service all todos and through model.addAttribute sends to listTodos.jsp
+    * this page also got link - add-todo
+    * controller got 2 classes for this link (GET - default, POST - if client clicks)
+    * GET method renderes form for todo 
+    * After you enter data and click subbmit method (POST) it takes data:
+        * through @RequestParam takes description 
+        * through @SessionAttributes and ModelMap takes name
+    * througth service adds new todo and redirect:list-todos
+        * when you use POST method its recommended to use redirect - which rerenders redirected link with get method
                     

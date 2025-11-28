@@ -71,4 +71,25 @@
         * through @SessionAttributes and ModelMap takes name
     * througth service adds new todo and redirect:list-todos
         * when you use POST method its recommended to use redirect - which rerenders redirected link with get method
-                    
+* Validation
+    * front-end validation is just add required="required" (not recomended)
+    * back-end validation 
+        * add dependency POM: 
+            * groupId - org.springframework.boot
+            * artifactId - spring-boot-starter-validation
+    * add to entity's field - @Size(min = 10, message = "Enter atleast 10 characters")
+    * make 2-way binding in a controller between GET and POST
+        * GET method creates todo - and sends through ModelMap
+            * takes username through session
+            * populates other fields with dummy data, but description = empty
+        * POST method
+            * takes as parameter - ModelMap map, @Valid Todo todo, BindingResult result
+            * if result.hasErrors - returns todo page
+            * if no error creates todo and passes to jsp through model
+    * in todo.jsp: 
+        * add tag - <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+        * form:input type="text" path="description" required="required" 
+        * form:errors path="description" cssClass="text-warning" 
+        * form:input type="hidden" path="id" 
+        * form:input type="hidden" path="done" 
+

@@ -92,4 +92,16 @@
         * form:errors path="description" cssClass="text-warning" 
         * form:input type="hidden" path="id" 
         * form:input type="hidden" path="done" 
-
+* Delete todo logic
+    * add to jsp file delete button with id
+        * a href="delete-todo?id=${todo.id}" class="btn btn-warning">Delete
+    * add to service layer - deleteById (int id) method with Predicater 
+    * add to controller level - deleteTodo(@RequestParam int id), which:
+        * calls deleteById from service layer
+        * redirects to list-todos again  
+* Update todo logic
+    * add to jsp file update button with id
+        * a href="update-todo?id=${todo.id}" class="btn btn-success">Update
+    * add to controller level method - String showUpdateTodoPage, which
+        * finds todo by id from service level
+        * returns "todo" jsp fil and trough model puts found todo

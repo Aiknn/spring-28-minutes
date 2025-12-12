@@ -5,7 +5,6 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import com.yerlan.learn_jdbc_jpa.course.Course;
-import com.yerlan.learn_jdbc_jpa.course.jpa.CourseJpaRepository;
 import com.yerlan.learn_jdbc_jpa.course.springjpa.CourseSpringDataJpaRepository;
 
 @Component

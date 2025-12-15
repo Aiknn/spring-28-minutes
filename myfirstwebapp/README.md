@@ -102,6 +102,15 @@
 * Update todo logic
     * add to jsp file update button with id
         * a href="update-todo?id=${todo.id}" class="btn btn-success">Update
-    * add to controller level method - String showUpdateTodoPage, which
+    * add to controller level method - String showUpdateTodoPage (GET), which
         * finds todo by id from service level
         * returns "todo" jsp fil and trough model puts found todo
+    * add to controller level method - String updateTodo (POST), which
+        * changes todo to new updated one through services
+        * returns "redirect:list-todos" 
+    * add to properties - spring.mvc.format.date=yyyy-MM-dd
+    * pom
+        * groupId - org.webjars
+    	* artifactId - bootstrap-datepicker
+        * version - 1.10.0
+    * change jsp file and add vidjets 

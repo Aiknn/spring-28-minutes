@@ -114,3 +114,8 @@
     	* artifactId - bootstrap-datepicker
         * version - 1.10.0
     * change jsp file and add vidjets 
+
+# DRY - making common things
+    * add new folders in jsp foler - header, navigation, footer
+    * cut all common information starting with DOC, header tags
+    * add to main code - <%@ include file="common/navigation.jspf" %>

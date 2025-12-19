@@ -119,3 +119,11 @@
     * add new folders in jsp foler - header, navigation, footer
     * cut all common information starting with DOC, header tags
     * add to main code - <%@ include file="common/navigation.jspf" %>
+
+# Security 
+    * add new dependency to POM
+        * groupId - org.springframework.boot
+		* artifactId - spring-boot-starter-security
+    * create class SpringSecurityConfiguration, and add
+        * InMemoryUserDetailsManager
+        * PasswordEncoder
